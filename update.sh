@@ -8,7 +8,7 @@ trap restore_dir EXIT
 
 cd "$(dirname "$0")" || exit
 
-FROM_HOME=( ".config/pipewire/pipewire.conf.d/10-sample-rate.conf" )
+FROM_HOME=( ".config/pipewire/pipewire.conf.d/10-sample-rate.conf" "scripts/moonlight.sh" "scripts/killport.sh" )
 for file in "${FROM_HOME[@]}"; do
     file_path="$(dirname "$file")"
     mkdir -p "$file_path"
